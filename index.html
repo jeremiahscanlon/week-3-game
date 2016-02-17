@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JavaScript Word Guess Game</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/custom.css">
+	<link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Coming+Soon|Work+Sans:400,300,500,600,700' >
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- bootstrap javascript -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="row-fluid">
+			<div class="col-md-12 header">
+				<h1>JavaScript Word Guess</h1>
+			</div>
+		</div>
+		<div class="row-fluid">
+			<div class="col-md-4 directions">
+				<p>Welcome to our JavaScript Word Guess game. We are trying to be politically correct and child safe here. As a result we decided not to name the site after the evil capital punishment game that has been defiling children's souls for ages.</p>
+				<button type="button" class="btn btn-warning" id='startAgain' style="display: none;" value='Try Again' onclick="startAgain();">Start Over</button>
+			</div>
+			<div class="col-md-8 directions">
+				<div class="panel panel-default">
+				  <div class="panel-heading">
+				    <button type="button" class="btn btn-info" onclick="toggle_visibility('panel-body');">How to play</button>
+				  </div>
+				  <div class="panel-body" id="panel-body" style="display: none;">
+				  	<ul>
+					    <li>A word is chosen at random from a list.</li>
+						<li>The number of letters of the word is represented by the spaces in the word section.</li>
+						<li>Guess a letter by hitting a key on your keyboard.</li>
+						<li>If you guess correctly the letter will show in it's spot in the word section.</li>
+						<li>You have ten wrong guesses before you lose.</li>
+						<li>Non-letters and anything you guessed already will not count as a wrong guess.</li>
+						<li>You can see how many wrong guess you have and letters you need to finish the word in the stats section.</li>
+						<li>To restart the game simply refresh the page.</li>
+						<li>NOTE: If you are on mobile please use the entry box below.</li>
+					</ul>
+				  </div>
+				</div>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+		<div class="row-fluid">
+			<div class="col-md-6">
+			</div>
+			<div class="col-md-6">
+				<div class="form-group" id='mobileEntry' style="display:none;">
+		        	<form class="navbar-form navbar-left" role="search">
+						<input type="text" autocapitalize="none" class="form-control mobileEntryText" id="textInputId" placeholder="Mobile Entry">
+						<button type="button" class="btn btn-info mobileEntryButton" onclick="mobileCapture();">Submit</button>
+					</form>
+		        </div>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+		<div class="row-fluid">
+			<div class="col-md-6">
+				<div class="holder">
+					<h2>Word:</h2>
+					<div id="word"></div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="holder">
+					<h2>Letters:</h2>
+					<div id="alphabet"></div>
+				</div>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+		
+		<div class="row-fluid">
+			<div class="col-md-6 alerts">
+				<h3>Stats:</h3>
+				<div class="alert alert-success" role="alert">
+					<div id="alertRight"></div>
+					<div id="nice"></div>
+				</div>
+				<div class="alert alert-danger" role="alert">
+					<div id="alertWrong"></div>
+					<div id="nope"></div>
+				</div>
+			</div>
+			<div class="col-md-6 guessLog">
+				<h3>Guesses:</h3>
+				<div id="guessLog"></div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="assets/js/game.js"></script>
+		
+	</div>
+</body>
+</html>

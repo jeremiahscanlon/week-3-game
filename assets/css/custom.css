@@ -1,0 +1,119 @@
+html, body{
+  min-height: 100%;
+}
+
+body {
+	font-family: 'Work Sans', sans-serif;
+	position: relative;
+}
+
+
+.header {
+	background-color: #eee;
+	padding: 20px;
+	width:100%;
+	margin-bottom: 20px;
+}
+.header h1 {
+	margin: 0px;
+}
+
+.panel-title {
+	display: inline-block;
+}
+
+.directions ul li {
+	list-style-type: circle;
+	color: #999;
+	margin-left: 20px;
+}
+#startAgain {
+	margin-bottom: 10px;
+}
+
+#alphabet p, #word p {
+	letter-spacing: 10px;
+	font-size: 20px;
+	font-family: 'Coming Soon', Arial, sans-serif;
+	line-height: 40px;
+}
+
+.wrong {
+	font-family: 'Work Sans', sans-serif;
+	color:red;
+}
+
+.correct {
+	font-family: 'Work Sans', sans-serif;
+	color:green;
+}
+
+.guessLog, .alerts {
+	height: 200px;
+}
+
+#guessLog {
+	overflow-y: scroll;
+	overflow-x: hidden;
+	height: 150px;
+}
+
+#guessLog ul li {
+	list-style-type: none;
+	color: #999;
+}
+
+#guessLog ul li:first-child { 
+    color: #000;
+    outline: 1px solid black;
+}
+
+.navbar-form {
+    padding: 0px !important;
+}
+
+.mobileEntryText {
+	border-top-right-radius: 0px !important;
+	border-bottom-right-radius: 0px !important;
+}
+
+.mobileEntryButton {
+	margin-left: -5px;
+	border-top-left-radius: 0px !important;
+	border-bottom-left-radius: 0px !important;
+}
+
+.navbar-form {
+	margin:0px !important;
+}
+
+@media screen and (max-width: 1088px) {
+	#alphabet p {
+	    letter-spacing: 6px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.mobileEntryText {
+		display: inline-block !important;
+		width: 75% !important;
+	}
+
+	.mobileEntryButton {
+		width: 25%;
+		/*margin-top: -3px !important;*/
+	}
+}
+
+@media screen and (max-width: 571px) {
+	
+	#alphabet p {
+		letter-spacing: 4px;
+	    font-size: 16px;	
+	}
+
+	h2 {
+		margin-top: 0px;
+	}
+
+}
