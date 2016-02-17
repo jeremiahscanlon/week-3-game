@@ -67,6 +67,8 @@ document.onkeypress = function (event) {
 	var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
 	// pass the key press into function
 	runGame(userGuess);
+	// empty the text Input field if that is where the character was typed on Apple Mobile
+	document.getElementById('textInputId').value = '';
 }
 
 function mobileCapture() {
